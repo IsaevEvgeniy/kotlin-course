@@ -4,6 +4,7 @@ fun main () {
     println(seasonDefinition(5))
     println(ageOfThePet(18))
     println(transport(6))
+    println(bonusRubles(1500))
 }
 
 fun seasonDefinition (month: Int?) : Any {
@@ -33,5 +34,15 @@ fun transport (distance: Int): Any {
             else if (distance in 2 .. 5) {"bicycle"}
             else {"motor transport"}
     }
+
+fun bonusRubles(theAmount: Int): Int {
+    return if (theAmount in 0..1000) {
+        (theAmount / 100) * 2
+    } else if (theAmount in 1001..10000) {
+        20 + ((theAmount - 1000) / 100) * 5
+    } else {
+        0
+    }
+}
 
 
