@@ -5,6 +5,7 @@ fun main () {
     println(ageOfThePet(18))
     println(transport(6))
     println(bonusRubles(1500))
+    println(fileType("jpg"))
 }
 
 fun seasonDefinition (month: Int?) : Any {
@@ -44,5 +45,13 @@ fun bonusRubles(theAmount: Int): Int {
         0
     }
 }
-
+*/
+fun fileType(fileExtension: String): String {
+    return when (fileExtension) {
+        in "txt" -> "A text document"
+        in "jpg" -> "Image"
+        in "xml" -> "Table"
+        else -> "Unknown type"
+    }
+}
 
